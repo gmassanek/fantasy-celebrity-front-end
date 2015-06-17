@@ -1,11 +1,8 @@
 <body class=" ">
 
 <div id="wrapper">
-
   <header class="navbar" role="banner">
-
     <div class="container">
-
       <div class="navbar-header">
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -13,12 +10,11 @@
         </button>
 
         <a href="./" class="navbar-brand navbar-brand-img">
-          MVP Ready
+          FancyThat
         </a>
-      </div> <!-- /.navbar-header -->
+      </div>
 
       <nav class="collapse navbar-collapse" role="navigation">
-
         <ul class="nav navbar-nav navbar-left">
 
           <li class="dropdown navbar-notification">
@@ -205,16 +201,11 @@
           </li>
 
         </ul>
-
       </nav>
-
-    </div> <!-- /.container -->
-
+    </div>
   </header>
 
-
   <div class="mainnav ">
-
     <div class="container">
 
       <a class="mainnav-toggle" data-toggle="collapse" data-target=".mainnav-collapse">
@@ -231,42 +222,56 @@
 
         <ul class="mainnav-menu">
 
-          <li class="dropdown active">
-          	<a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-            
-          	Dashboards
-          	<i class="mainnav-caret"></i>
-          	</a>
+          {{#link-to 'leagues.show' tagName='li' class='dropdown'}}
+            {{#link-to 'leagues.show' 1}}League{{/link-to}}
+          {{/link-to}}
 
-          	<ul class="dropdown-menu" role="menu">
+          {{#link-to 'leagues.players' tagName='li' class='dropdown'}}
+            {{#link-to 'leagues.players' class='dropdown-toggle' data-toggle='dropdown' data-hover='dropdown'}}
+              Players
+              <i class="mainnav-caret"></i>					
+            {{/link-to}}
+
+            <ul class="dropdown-menu" role="menu">
               <li>
-                <a href="./index.html">
-                <i class="fa fa-dashboard dropdown-icon "></i> 
-                Analytics Dashboard
+                {{#link-to 'leagues.players' href="javascript:;"}}
+                  <i class="fa fa-bars dropdown-icon "></i> 
+                  Tabs &amp; Accordions
+                {{/link-to}}
+              </li>
+
+              <li>
+                <a href="./components-popups.html">
+                <i class="fa fa-calendar-o dropdown-icon "></i> 
+                Popups &amp; Alerts
                 </a>
               </li>
 
               <li>
-                <a href="./dashboard-2.html">
-                <i class="fa fa-dashboard dropdown-icon "></i> 
-                Sidebar Dashboard
+                <a href="./form-plugins.html">
+                <i class="fa fa-plug dropdown-icon "></i> 
+                Forms Plugins
                 </a>
               </li>
 
               <li>
-                <a href="./dashboard-3.html">
-                <i class="fa fa-dashboard dropdown-icon "></i> 
-                Reports Dashboard
+                <a href="./components-datatables.html">
+                <i class="fa fa-table dropdown-icon "></i> 
+                Data Tables
                 </a>
               </li>
-          	</ul>
-          </li>
 
+              <li>
+                <a href="./components-charts.html">
+                <i class="fa fa-bar-chart-o dropdown-icon "></i> 
+                Charts
+                </a>
+              </li>		  
+            </ul>
+          {{/link-to}}
 
           <li class="dropdown ">
-
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
-              
             Components
             <i class="mainnav-caret"></i>					
             </a>
@@ -483,199 +488,14 @@
       </nav>
 
     </div> <!-- /.container -->
-
-  </div> <!-- /.mainnav -->
+  </div>
 
   <div class="content">
-
     <div class="container">
-
-        <div class="row">
-
-          <div class="col-md-4 col-sm-5">
-
-            <div class="portlet portlet-default">
-
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Daily Stats
-                </h4>
-              </div> <!-- /.portlet-header -->
-
-              <div class="portlet-body">                
-              
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, fugiat, dolores, laborum sit.</p>
-
-                <hr>
-                
-                <table class="table keyvalue-table">
-                  <tbody>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-dollar kv-icon kv-icon-primary"></i> Revenue</td>
-                      <td class="kv-value">$5,367 </td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-gift kv-icon kv-icon-secondary"></i> Total Sales</td>
-                      <td class="kv-value">473 </td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-exchange kv-icon kv-icon-tertiary"></i>Referrals</td>
-                      <td class="kv-value">78</td>
-                    </tr>
-                    <tr>
-                      <td class="kv-key"><i class="fa fa-envelope-o kv-icon kv-icon-default"></i> Inquiries</td>
-                      <td class="kv-value">39 </td>
-                    </tr>
-                  </tbody>
-                </table>
-
-              </div> <!-- /.portlet-body -->
-
-            </div> <!-- /.portlet -->
-            
-          </div> <!-- /.col -->
-
-
-          <div class="col-md-8 col-sm-7">
-            <div class="portlet portlet-default">
-
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Monthly Traffic
-                </h4>
-              </div> <!-- /.portlet-header -->
-                
-              <div class="portlet-body">
-
-                <div id="line-chart" class="chart-holder-300"></div>
-              </div> <!-- /.portlet-body -->          
-
-            </div> <!-- /.portlet -->
-
-          </div> <!-- /.col -->
-
-        </div> <!-- /.row -->
-
-        <br>
-
-        <div class="row">
-
-            <div class="col-md-5">
-
-              <div class="portlet portlet-default">
-
-                <div class="portlet-header">
-                  <h4 class="portlet-title">
-                    Product Breakdown
-                  </h4>
-                </div> <!-- /.portlet-header -->
-                
-                <div class="portlet-body">
-
-                  <div id="pie-chart" class="chart-holder-250"></div>
-                </div> <!-- /.portlet-body -->
-                
-              </div> <!-- /.portlet -->
-
-            </div> <!-- /.col -->
-
-            <div class="col-md-3">
-
-              <div class="portlet portlet-default">
-
-                <div class="portlet-header">
-                  <h4 class="portlet-title">
-                    Progress Stats
-                  </h4>
-                </div> <!-- /.portlet-header -->
-
-                <div class="portlet-body">
-                  
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      % New Visits
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      77.7%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%">
-                        <span class="sr-only">77.74% Visit Rate</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
-
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      % Mobile Visitors
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      33.2%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-tertiary" role="progressbar" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
-                        <span class="sr-only">33% Mobile Visitors</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
-
-                  <div class="progress-stat">
-                      
-                    <div class="progress-stat-label">
-                      Bounce Rate
-                    </div>
-                    
-                    <div class="progress-stat-value">
-                      42.7%
-                    </div>
-                    
-                    <div class="progress progress-striped progress-sm active">
-                      <div class="progress-bar progress-bar-secondary" role="progressbar" aria-valuenow="42" aria-valuemin="0" aria-valuemax="100" style="width: 42%">
-                        <span class="sr-only">42.7% Bounce Rate</span>
-                      </div>
-                    </div> <!-- /.progress -->
-                    
-                  </div> <!-- /.progress-stat -->
-
-                </div> <!-- /.portlet-body -->
-
-              </div> <!-- /.portlet -->
-
-          </div> <!-- /.col -->
-
-          <div class="col-md-4">
-            <div class="portlet portlet-default">
-
-              <div class="portlet-header">
-                <h4 class="portlet-title">
-                  Server Load
-                </h4>
-              </div> <!-- /.portlet-header -->
-
-              <div class="portlet-body">
-
-                <div id="auto-chart" class="chart-holder-200"></div>
-              </div> <!-- /.portlet-body -->
-
-            </div> <!-- /.portlet -->
-            
-          </div> <!-- /.col -->
-
-        </div> <!-- /.row -->
-
-    </div> <!-- /.container -->
-
-  </div> <!-- .content -->
-
-</div> <!-- /#wrapper -->
+      {{outlet}}
+    </div>
+  </div>
+</div>
 
 <footer class="footer">
   <div class="container">
