@@ -12,6 +12,7 @@
 *
 * ======================================================== */
 
+console.log('here is a thing');
 var mvpready_core = function () {
 
   "use strict"
@@ -87,7 +88,9 @@ var mvpready_core = function () {
 
       if (!('ontouchstart' in document.documentElement)) {
         $parent.find ('.dropdown-toggle').click (function (e) {
+            console.log('dropdown toggle clicked');
             if (!isLayoutCollapsed ()) {
+              console.log('dropdown toggle clicked - not collapsed');
               e.preventDefault ()
               e.stopPropagation ()
             }
