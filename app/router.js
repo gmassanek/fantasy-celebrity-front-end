@@ -17,7 +17,10 @@ Router.map(function() {
     });
     this.route('positions');
     this.route('scoring');
-    this.route('points');
+    this.route('points', function() {
+      this.route('index', {path: "/"});
+      this.route('new');
+    });
   });
 });
 
