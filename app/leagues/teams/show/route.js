@@ -122,7 +122,8 @@ export default Ember.Route.extend({
           category: "Legal",
           action: "Domestic Abuse",
           points: 15,
-          status: "approved"
+          status: "approved",
+          proof: "http://gmail.com"
         }
       ]
     };

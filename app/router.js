@@ -17,6 +17,7 @@ Router.map(function() {
     });
     this.route('positions');
     this.route('scoring');
+    this.route('points');
   });
 });
 
