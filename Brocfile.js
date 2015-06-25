@@ -25,16 +25,34 @@ app.import("bower_components/fontawesome/fonts/fontawesome-webfont.ttf", { destD
 app.import("bower_components/fontawesome/fonts/fontawesome-webfont.woff", { destDir: 'fonts' });
 app.import("bower_components/fontawesome/fonts/fontawesome-webfont.woff2", { destDir: 'fonts' });
 app.import("bower_components/slimscroll/jquery.slimscroll.min.js");
-app.import("bower_components/flot/excanvas.min.js");
+
+// Bootstrap
 app.import("bower_components/flot/jquery.flot.js");
 app.import("bower_components/flot/jquery.flot.pie.js");
 app.import("bower_components/flot/jquery.flot.resize.js");
 app.import("bower_components/flot/jquery.flot.time.js");
+app.import("bower_components/flot/jquery.flot.stack.js");
+app.import("bower_components/flot/jquery.flot.categories.js");
 app.import("bower_components/flot.tooltip/js/jquery.flot.tooltip.js");
 
+// Bootstrap
 app.import("bower_components/bootstrap/dist/css/bootstrap.min.css");
 app.import("bower_components/bootstrap/dist/js/bootstrap.min.js");
 
+// Datatables
+app.import("bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css");
+app.import("bower_components/datatables/media/js/jquery.dataTables.min.js");
+app.import("bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.js");
+
+app.import("bower_components/datatables/media/images/sort_asc.png", { destDir: 'images' });
+app.import("bower_components/datatables/media/images/sort_asc_disabled.png", { destDir: 'images' });
+app.import("bower_components/datatables/media/images/sort_both.png", { destDir: 'images' });
+app.import("bower_components/datatables/media/images/sort_desc.png", { destDir: 'images' });
+app.import("bower_components/datatables/media/images/sort_desc_disabled.png", { destDir: 'images' });
+
+app.import("bower_components/ember/ember-template-compiler.js", { destDir: 'images' });
+
+// MVP Ready
 app.import("vendor/mvpready-admin.css");
 app.import("vendor/mvpready-core.js");
 app.import("vendor/mvpready-helpers.js");

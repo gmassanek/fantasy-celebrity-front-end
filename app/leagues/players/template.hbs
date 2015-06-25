@@ -1,5 +1,38 @@
 <div class="row">
-  <h2>Players</h2>
-</div>
+  <div class="portlet portlet-default">
+    <div class="portlet-header">
+      <h3 class="portlet-title"> Players </h3>
+    </div>
 
-{{outlet}}
+    {{#data-table searching=true paging=true ordering=true initOrderCol=8 initOrderDir="desc"}}
+      <thead>
+        <tr role="row">
+          <th aria-label="Player">Player</th>
+          <th aria-label="Position">Position</th>
+          <th aria-label="Legal Points">Legal Points</th>
+          <th aria-label="Fighting Points">Fighting Points</th>
+          <th aria-label="Career Points">Career Points</th>
+          <th aria-label="Marital Points">Marital Points</th>
+          <th aria-label="Health Points">Health Points</th>
+          <th aria-label="Other Points">Other Points</th>
+          <th aria-label="Total Points">Total Points</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model.players as |player|}}
+          <tr role="row" class="odd">
+            <td>{{player.name}}</td>
+            <td>{{player.position}}</td>
+            <td>{{player.points.legal}}</td>
+            <td>{{player.points.fighting}}</td>
+            <td>{{player.points.career}}</td>
+            <td>{{player.points.marital}}</td>
+            <td>{{player.points.health}}</td>
+            <td>{{player.points.other}}</td>
+            <td>{{player.points.total}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    {{/data-table}}
+  </div>
+</div>

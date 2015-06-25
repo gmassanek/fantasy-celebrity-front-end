@@ -12,7 +12,6 @@
 *
 * ======================================================== */
 
-console.log('here is a thing');
 var mvpready_core = function () {
 
   "use strict"

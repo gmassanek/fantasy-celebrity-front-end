@@ -7,7 +7,7 @@
       </h4>
     </div>
 
-    <table class="table table-striped table-bordered table-hover ui-datatable dataTable dataTable-helper" data-global-search="false" data-length-change="false" data-info="false" data-paging="false" data-page-length="10" id="DataTables_Table_2" role="grid">
+    {{#data-table searching=true paging=true ordering=true initOrderDir="desc"}}
       <thead>
         <tr role="row">
           <th aria-label="Date">Date</th>
@@ -32,6 +32,6 @@
           </tr>
         {{/each}}
       </tbody>
-    </table>
+    {{/data-table}}
   </div>
 </div>
