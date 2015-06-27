@@ -3,7 +3,8 @@ import ajax from 'ic-ajax';
 
 export default Ember.Route.extend({
   model() {
-    var uri = `${EmberENV.apiRoot}/api/v1/status`;
+    var leaguesModel = this.modelFor('leagues');
+    var uri = `${EmberENV.apiRoot}/api/v1/leagues/${leaguesModel.id}/point_categories`;
     return ajax(uri);
   }
 });

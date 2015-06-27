@@ -8,17 +8,17 @@
   {{#data-table ordering=true searching=true}}
     <thead>
       <tr role="row">
-        <th class="sorting_disabled" aria-label="Category">Category</th>
-        <th class="sorting_disabled" aria-label="Action">Action</th>
+        <th class="sorting_disabled" aria-label="Group">Group</th>
+        <th class="sorting_disabled" aria-label="Title">Title</th>
         <th class="sorting_disabled" aria-label="Points">Points</th>
       </tr>
     </thead>
     <tbody>
       {{#each model.pointCategories as |pointCategory|}}
         <tr role="row">
-          <td>{{pointCategory.category}}</td>
-          <td>{{pointCategory.name}}</td>
-          <td>{{pointCategory.points}}</td>
+          <td>{{pointCategory.group}}</td>
+          <td>{{pointCategory.title}}</td>
+          <td>{{pointCategory.value}}</td>
         </tr>
       {{/each}}
     </tbody>
