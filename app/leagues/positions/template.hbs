@@ -4,14 +4,20 @@
       Positions
     </h3>
   </div> 
-  <table class="table">
+  {{#data-table}}
+    <thead>
+      <tr role="row">
+        <th aria-label="Position">Position</th>
+        <th aria-label="Count">Count</th>
+      </tr>
+    </thead>
     <tbody>
       {{#each model.positions as |position|}}
         <tr>
-          <th>{{position.name}}</th>
-          <td>{{position.slots}}</td>
+          <td>{{position.title}}</td>
+          <td>{{position.count}}</td>
         </tr>
       {{/each}}
     </tbody>
-  </table>
+  {{/data-table}}
 </div>

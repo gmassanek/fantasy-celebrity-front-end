@@ -1,30 +1,15 @@
 import Ember from 'ember';
+import ajax from 'ic-ajax';
 
 export default Ember.Route.extend({
   model() {
-    return {
-      positions: [ {
-        name: "Actors",
-        slots: 2
-      }, {
-        name: "Athletes",
-        slots: 1
-      }, {
-        name: "Politicians",
-        slots: 1
-      }, {
-        name: "Miscellaneous",
-        slots: 2
-      }, {
-        name: "Reality Starts",
-        slots: 1
-      }, {
-        name: "Musicians",
-        slots: 1
-      }, {
-        name: "Dead People",
-        slots: 1
-      } ]
-    };
+    var leaguesModel = this.modelFor('leagues');
+
+    var uri = `${EmberENV.apiRoot}/api/v1/leagues/${leaguesModel.id}/positions`;
+    return ajax(uri).then(function(data) {
+      return data;
+    }).fail(function() {
+      console.log("Error fetching league positions");
+    });
   }
 });
