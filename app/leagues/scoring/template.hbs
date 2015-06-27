@@ -14,31 +14,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr role="row" class="odd">
-        <td>Legal</td>
-        <td>DUI</td>
-        <td>20</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>Legal</td>
-        <td>Posession of Drugs</td>
-        <td>20</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>Fighting</td>
-        <td>Disorderly Conduct</td>
-        <td>15</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>Career</td>
-        <td>Leaked Sex Tape</td>
-        <td>30</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>Career</td>
-        <td>Leaked Nude Pics</td>
-        <td>25</td>
-      </tr>
+      {{#each model.pointCategories as |pointCategory|}}
+        <tr role="row">
+          <td>{{pointCategory.category}}</td>
+          <td>{{pointCategory.name}}</td>
+          <td>{{pointCategory.points}}</td>
+        </tr>
+      {{/each}}
     </tbody>
   {{/data-table}}
 </div>
