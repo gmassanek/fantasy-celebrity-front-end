@@ -30,7 +30,7 @@ app.import("bower_components/fontawesome/fonts/fontawesome-webfont.woff", { dest
 app.import("bower_components/fontawesome/fonts/fontawesome-webfont.woff2", { destDir: 'fonts' });
 app.import("bower_components/slimscroll/jquery.slimscroll.min.js");
 
-// Bootstrap
+// Flot charts
 app.import("bower_components/flot/jquery.flot.js");
 app.import("bower_components/flot/jquery.flot.pie.js");
 app.import("bower_components/flot/jquery.flot.resize.js");
@@ -42,6 +42,11 @@ app.import("bower_components/flot.tooltip/js/jquery.flot.tooltip.js");
 // Bootstrap
 app.import("bower_components/bootstrap/dist/css/bootstrap.min.css");
 app.import("bower_components/bootstrap/dist/js/bootstrap.min.js");
+app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.eot", { destDir: 'fonts' });
+app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.svg", { destDir: 'fonts' });
+app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf", { destDir: 'fonts' });
+app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff", { destDir: 'fonts' });
+app.import("bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.woff2", { destDir: 'fonts' });
 
 // Datatables
 app.import("bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css");
