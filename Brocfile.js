@@ -67,4 +67,7 @@ app.import("vendor/mvpready-core.js");
 app.import("vendor/mvpready-helpers.js");
 app.import("vendor/mvpready-admin.js");
 
+// TODO remove
+app.import("vendor/profile.jpeg", { destDir: 'images' });
+
 module.exports = app.toTree();
