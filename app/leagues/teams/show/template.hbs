@@ -22,17 +22,17 @@
       </thead>
       <tbody>
 
-        {{#each model.roster as |player|}}
+        {{#each model.team.roster_slots as |roster_slot|}}
           <tr role="row" class="odd">
-            <td>{{player.name}}</td>
-            <td>{{player.position}}</td>
-            <td>{{player.points.legal}}</td>
-            <td>{{player.points.fighting}}</td>
-            <td>{{player.points.career}}</td>
-            <td>{{player.points.marital}}</td>
-            <td>{{player.points.health}}</td>
-            <td>{{player.points.other}}</td>
-            <td>{{player.points.total}}</td>
+            <td>{{roster_slot.player.first_name}} {{roster_slot.player.last_name}}</td>
+            <td>{{roster_slot.league_position.title}}</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
           </tr>
         {{/each}}
       </tbody>
