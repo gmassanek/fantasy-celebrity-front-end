@@ -1,5 +1,5 @@
 <div class="row">
-  <h2>Team {{ model.id }}</h2>
+  <h2>{{ model.title }}</h2>
 
   <div class="portlet portlet-default">
     <div class="portlet-header">
@@ -22,10 +22,10 @@
       </thead>
       <tbody>
 
-        {{#each model.team.roster_slots as |roster_slot|}}
+        {{#each model.rosterSlots as |rosterSlot|}}
           <tr role="row" class="odd">
-            <td>{{roster_slot.player.first_name}} {{roster_slot.player.last_name}}</td>
-            <td>{{roster_slot.league_position.title}}</td>
+            <td>{{rosterSlot.player.first_name}} {{rosterSlot.player.last_name}}</td>
+            <td>{{rosterSlot.leaguePosition.title}}</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
