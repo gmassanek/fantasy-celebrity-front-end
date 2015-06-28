@@ -2,7 +2,7 @@ import { moduleForModel, test } from 'ember-qunit';
 
 moduleForModel('roster-slot', 'Unit | Model | roster slot', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:player', 'model:league-position']
 });
 
 test('it exists', function(assert) {
