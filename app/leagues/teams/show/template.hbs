@@ -1,12 +1,12 @@
 <div class="row">
-  <h2>Team {{ model.id }}</h2>
+  <h2>{{ model.title }}</h2>
 
   <div class="portlet portlet-default">
     <div class="portlet-header">
       <h4 class="portlet-title"> Roster </h4>
     </div>
 
-    {{#data-table}}
+    {{#data-table ordering=true initOrderCol=1}}
       <thead>
         <tr role="row">
           <th aria-label="Player">Player</th>
@@ -22,17 +22,17 @@
       </thead>
       <tbody>
 
-        {{#each model.roster as |player|}}
+        {{#each model.rosterSlots as |rosterSlot|}}
           <tr role="row" class="odd">
-            <td>{{player.name}}</td>
-            <td>{{player.position}}</td>
-            <td>{{player.points.legal}}</td>
-            <td>{{player.points.fighting}}</td>
-            <td>{{player.points.career}}</td>
-            <td>{{player.points.marital}}</td>
-            <td>{{player.points.health}}</td>
-            <td>{{player.points.other}}</td>
-            <td>{{player.points.total}}</td>
+            <td>{{rosterSlot.leaguePlayer.first_name}} {{rosterSlot.leaguePlayer.last_name}}</td>
+            <td>{{rosterSlot.leaguePosition.title}}</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
           </tr>
         {{/each}}
       </tbody>

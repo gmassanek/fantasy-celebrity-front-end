@@ -7,42 +7,18 @@
     <thead>
       <tr role="row">
         <th aria-label="Rank">Rank</th>
-        <th aria-label="Owner">Owner</th>
         <th aria-label="Team">Team</th>
         <th aria-label="Points">Points</th>
       </tr>
     </thead>
     <tbody>
-      <tr role="row" class="odd">
-        <td>1</td>
-        <td>Geoff</td>
-        <td>Geoff's Killers</td>
-        <td>520</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>2</td>
-        <td>Matty R</td>
-        <td>Boomtastic</td>
-        <td>510</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>3</td>
-        <td>Joel W</td>
-        <td>Weisburglers</td>
-        <td>320</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>4</td>
-        <td>Prof</td>
-        <td>Mr. Professoro</td>
-        <td>300</td>
-      </tr>
-      <tr role="row" class="odd">
-        <td>5</td>
-        <td>Sam Kies</td>
-        <td>Zombie Dust</td>
-        <td>220</td>
-      </tr>
+      {{#each model as |team|}}
+        <tr role="row">
+          <td>{{team.id}}</td>
+          <td>{{#link-to "leagues.teams.show" 1 team}} {{team.title}} {{/link-to}}</td>
+          <td>0</td>
+        </tr>
+      {{/each}}
     </tbody>
   {{/data-table}}
 </div>

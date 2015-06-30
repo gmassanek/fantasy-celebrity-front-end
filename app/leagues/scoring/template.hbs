@@ -5,7 +5,7 @@
     </h3>
   </div>
 
-  {{#data-table ordering=true searching=true}}
+  {{#data-table ordering=true searching=true paging=true pageLength=25}}
     <thead>
       <tr role="row">
         <th aria-label="Group">Group</th>
@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      {{#each model.pointCategories as |pointCategory|}}
+      {{#each model as |pointCategory|}}
         <tr role="row">
           <td>{{pointCategory.group}}</td>
           <td>{{pointCategory.title}}</td>

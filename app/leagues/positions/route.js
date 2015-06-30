@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   model() {
     var leaguesModel = this.modelFor('leagues');
 
-    var uri = `${EmberENV.apiRoot}/api/v1/leagues/${leaguesModel.id}/positions`;
+    var uri = `${EmberENV.apiRoot}/api/v1/leagues/${leaguesModel.league_id}/positions`;
     return ajax(uri).then(function(data) {
       return data;
     }).fail(function() {
