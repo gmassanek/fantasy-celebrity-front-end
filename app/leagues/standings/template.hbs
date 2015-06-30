@@ -14,8 +14,8 @@
     <tbody>
       {{#each model as |team|}}
         <tr role="row">
-          <td>1</td>
-          <td>{{#link-to "leagues.teams.show" team.id}} {{team.title}} {{/link-to}}</td>
+          <td>{{team.id}}</td>
+          <td>{{#link-to "leagues.teams.show" 1 team}} {{team.title}} {{/link-to}}</td>
           <td>0</td>
         </tr>
       {{/each}}

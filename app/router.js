@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('leagues', { path: "leagues/:id" }, function() {
+  this.route('leagues', { path: "leagues/:league_id" }, function() {
     this.route('players');
     this.route('show', { path: "/" });
     this.route('settings');
