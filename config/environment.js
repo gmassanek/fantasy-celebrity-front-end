@@ -41,7 +41,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.EmberENV.apiRoot = ""
-    EmberENV.FEATURES['google-analytics'] = true
+    ENV.EmberENV.FEATURES['google-analytics'] = true
   }
 
   return ENV;
