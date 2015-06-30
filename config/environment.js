@@ -9,8 +9,7 @@ module.exports = function(environment) {
     EmberENV: {
       apiRoot: "http://localhost:3000",
       FEATURES: {
-        // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        'google-analytics': false
       }
     },
 
@@ -42,6 +41,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.EmberENV.apiRoot = ""
+    EmberENV.FEATURES['google-analytics'] = true
   }
 
   return ENV;
