@@ -1,0 +1,43 @@
+{{flash-banner level="danger" message=model.errorMessage}}
+
+<h1> Edit Team </h1>
+
+<div class="portlet portlet-default">
+
+  <div class="portlet-header">
+    <h4 class="portlet-title">
+      Roster
+    </h4>
+  </div>
+
+  <form {{action "submit" on="submit"}}>
+    {{#data-table ordering=true initOrderCol=1}}
+      <thead>
+        <tr role="row">
+          <th aria-label="Player">Player</th>
+          <th aria-label="Position">Position</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        {{#each model.team.rosterSlots as |rosterSlot|}}
+          <tr role="row" class="odd roster-slot-{{rosterSlot.id}}">
+            <td>{{rosterSlot.leaguePlayer.first_name}} {{rosterSlot.leaguePlayer.last_name}}</td>
+            <td>
+              {{select-box
+                options=rosterSlot.leaguePlayer.allowedLeaguePositions
+                selectedValue=rosterSlot.league_position_id
+                changeAction=(action (mut rosterSlot.league_position_id))
+              }}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    {{/data-table}}
+
+    <div class="pull-right">
+      <button {{action "cancel"}} type="reset" class="btn btn-default">Cancel</button>
+      <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+  </form>
+</div>

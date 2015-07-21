@@ -3,7 +3,12 @@
 
   <div class="portlet portlet-default">
     <div class="portlet-header">
-      <h4 class="portlet-title"> Roster </h4>
+      <h4 class="portlet-title">
+        Roster
+        {{#link-to 'leagues.teams.edit' model.id class="pull-right fa fa-edit"}}
+          Edit Roster
+        {{/link-to}}
+      </h4>
     </div>
 
     {{#data-table ordering=true initOrderCol=1}}

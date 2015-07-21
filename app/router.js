@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('teams', function() {
       this.route('index', {path: "/"});
       this.route('show', {path: "/:id"});
+      this.route('edit', {path: "/:id/edit"});
     });
     this.route('positions');
     this.route('scoring');

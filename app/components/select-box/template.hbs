@@ -1,0 +1,7 @@
+<select onchange={{action 'changed'}}>
+  {{#each options as |item|}}
+    <option value="{{item.id}}" selected={{is-int-equal item.id selectedValue}}>
+      {{item.title}}
+    </option>
+  {{/each}}
+</select>

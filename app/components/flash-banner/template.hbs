@@ -1,0 +1,6 @@
+{{#if shouldDisplay}}
+  <p class="alert alert-{{level}}">
+    <a {{action 'dismiss'}} class="close" href="#" aria-hidden="true">×</a>
+    {{message}}
+  </p>
+{{/if}}
